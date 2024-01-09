@@ -11,9 +11,19 @@
 Partition-tolerant by default.
 
 Can be configured to be both AP ('eventual' consistency/low latency) or CP ('strong' consistency/high latency). 
+# Data Model
 
+NoSQL document-oriented data model
+Data stored as JSON documents
+
+# Questions to answer 
+1) What makes couchbase an 'easy to scale' server? What databases types are hard to scale? 
+2) What does Couchbase have in common with the other databases on the list, and what sets it apart?
+3) What is sharding?
+4) What is NoSQL?
+5) Demo?
 # Sources
 
 https://www.couchbase.com/
 https://en.wikipedia.org/wiki/Couchbase_Server
-
+https://developer.couchbase.com/tutorial-quickstart-nodejs
