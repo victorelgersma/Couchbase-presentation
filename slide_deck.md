@@ -19,3 +19,7 @@ marp: true
 ---
 
 # Use cases
+
+---
+
+# Pros and cons
