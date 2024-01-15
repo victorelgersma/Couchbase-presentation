@@ -31,9 +31,9 @@ https://www.couchbase.com/
 https://en.wikipedia.org/wiki/Couchbase_Server
 https://developer.couchbase.com/tutorial-quickstart-nodejs
 
-Some background to the database system - Victor
-Overview of the design and architecture of the system - Savannah
-Where does it fall in the CAP model, Why? - Victor
-Describe some use cases of the database - Savannah
-Pros and Cons of the database - Victor
-Consider a demo if that's possible - Savannah
+- Some background to the database system - Victor
+- Overview of the design and architecture of the system - Savannah
+- Where does it fall in the CAP model, Why? - Victor
+- Describe some use cases of the database - Savannah
+- Pros and Cons of the database - Victor
+- Consider a demo if that's possible - Savannah
