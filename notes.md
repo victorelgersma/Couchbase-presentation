@@ -30,10 +30,12 @@ Data stored as JSON documents
 https://www.couchbase.com/
 https://en.wikipedia.org/wiki/Couchbase_Server
 https://developer.couchbase.com/tutorial-quickstart-nodejs
+https://couchbase.live/examples/basic-java-query-rows
+https://terrydhariwal.github.io/2016/03/22/part-2-couchbase-architecture-in-a-nutshell
 
-- Some background to the database system - Victor
-- Overview of the design and architecture of the system - Savannah
-- Where does it fall in the CAP model, Why? - Victor
-- Describe some use cases of the database - Savannah
-- Pros and Cons of the database - Victor
-- Consider a demo if that's possible - Savannah
+Some background to the database system - Victor
+Overview of the design and architecture of the system - Savannah
+Where does it fall in the CAP model, Why? - Victor
+Describe some use cases of the database - Savannah
+Pros and Cons of the database - Victor
+Consider a demo if that's possible - Savannah
