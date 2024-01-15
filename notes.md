@@ -30,6 +30,8 @@ Data stored as JSON documents
 https://www.couchbase.com/
 https://en.wikipedia.org/wiki/Couchbase_Server
 https://developer.couchbase.com/tutorial-quickstart-nodejs
+https://couchbase.live/examples/basic-java-query-rows
+https://terrydhariwal.github.io/2016/03/22/part-2-couchbase-architecture-in-a-nutshell
 
 Some background to the database system - Victor
 Overview of the design and architecture of the system - Savannah
