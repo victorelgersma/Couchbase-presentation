@@ -27,6 +27,55 @@
 - Couchbase data is
 - The cluster manager is written in Erlang, a virtual machine based language
 
+## Failover and rebalance
+
+_Failover_
+
+- _Failover_ is when a node is removed from a cluster with speed.
+- When a data service node is removed manually it is known as a _graceful failover_
+- _Graceful failover_ of a data-service node that needs to be operated on triggers replica vBuckets on the remaining nodes to become active, and ensures continued data availabilty to the application
+- When a node fails it is known as a _hard failover_
+- _Automatic failover_ is hard failover initiated by the server
+
+_Rebalance_
+
+- _Rebalance_ is when data is redistributed between the available nodes in the cluster
+- _Rebalance_ should occur when nodes are added or removed
+
 # Use cases of the database
+
+It is used for interactive web applications
+
+## Gaming
+
+General gaming features:
+
+- Large numbers of concurrent users (often global)
+- High responsivity
+- Availability 24/7
+- Frequent updates
+- Semi and unstructured data?
+
+In gaming, databases are used to store data such as character data, saved games, scores and much more.
+
+_Jam City_ is a Facebook game which began to use Couchbase due to anticipated increased scalability requirement
+
+The failover and rebalance means that live traffic is not functionally affected when nodes are manually updated or maintained:
+
+- Graceful failover of the target node performed (replica vBuckets activated)
+- Maintenance operations performed on the target node
+- Target node added back to cluster and rebalance occurs
+- Cluster is at original state with updated target node
+
+The JSON data model of Couchbase benefits Jam City by providing database schema flexibility and increased application speed
+
+<!-- - Iterative game design includes planning, design, coding, testing, release and evalution -->
+
+- Game design is based on continuous iteration
+- The JSON data model allows the game to iterate without having to request and wait for schema changes (altering of database structure)
+
+## Media
+
+## Commerce
 
 # Consider a demo if that's possible
