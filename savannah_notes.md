@@ -8,7 +8,7 @@ color: black
 \
 \
 \
-![bg opacity:70%](background.jpeg)
+![bg opacity:70%](img/background.jpeg)
 
 # Design and architecture of the system
 
@@ -53,11 +53,11 @@ color: black
 
 _Failover_ is when a node is removed from a cluster with speed.
 
-- When a data service node is removed manually it is known as a _graceful failover_
-- _Graceful failover_ of a data-service node that needs to be operated on triggers replica vBuckets on the remaining nodes to become active, and ensures continued data availability to the application
+- When a data service node is removed manually it is known as a _graceful failover_.
+- It occurs on a data-service node that needs to be operated on and triggers replica vBuckets on the remaining nodes to become active.
+- This ensures continued data availability to the application
 - The replica buckets are configured in intra-cluster replication which happens at bucket-creation
-- When a node fails it is known as a _hard failover_
-- _Automatic failover_ is hard failover initiated by the server
+- When a node fails it is known as a _hard failover_. _Automatic failover_ is hard failover initiated by the server
 
 ---
 
@@ -73,6 +73,7 @@ _Failover_ is when a node is removed from a cluster with speed.
 - Cross Data Center Replication (XDCR) replicates data from a bucket on the source cluster, and the data is received by a bucket on the target cluster
 
 - The source and target cluster can be different, unlike in intra-cluster replication
+- XDCR replicates data across multiple data centers in different geographical locations
 
 ---
 
@@ -80,7 +81,7 @@ _Failover_ is when a node is removed from a cluster with speed.
 \
 \
 \
-![bg opacity:70%](background.jpeg)
+![bg opacity:70%](img/background.jpeg)
 
 # Use cases of the database
 
@@ -120,7 +121,7 @@ In gaming, databases are used to store data such as character data, saved games,
 
 _Jam City_ is a Facebook game which began to use Couchbase due to anticipated increased scalability requirement
 
-![bg right width:650px height:400px](jam-city.jpeg)
+![bg right width:650px height:400px](img/jam-city.jpeg)
 
 ---
 
@@ -166,10 +167,8 @@ Couchbase offered Sky increased scalability and performance in comparison with O
 ### Identity platform
 
 - _Sky_ moved its identity platform - which enables user sign-up and sign in - from Oracle RDBMS to Couchbase
-- XDCR replicates data across multiple data centers in different geographical locations
-- There is always a backup of data if there are issues with one data centers, ensuring data availabilty and resilience
-- XDCR tends to operate at the speed of network and/or memory with very latency
-
+- XDCR ensures there is always a backup of data if there are issues with one data centers, ensuring data availabilty and resilience
+- XDCR tends to operate at the speed of network and/or memory with low latency
 - Moving the platform provided Sky with a 50% reduction in sign-in response time due to XDCR
 
 ---
@@ -196,6 +195,6 @@ Head of IT Architecture, Sky_
 \
 \
 \
-![bg opacity:70%](background.jpeg)
+![bg opacity:70%](img/background.jpeg)
 
 # Demo
