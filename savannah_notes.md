@@ -4,13 +4,17 @@ theme: gaia
 color: black
 ---
 
+\
+\
+\
+\
 ![bg opacity:70%](background.jpeg)
 
 # Design and architecture of the system
 
 ---
 
-## Data
+### Data
 
 - Data is stored as items in document
 - Each item has a key and a value, and is identified by a unique Document ID
@@ -19,14 +23,14 @@ color: black
 
 ---
 
-## Storage
+### Storage
 
 - Items are stored in buckets, which are named data containers
 - Most deployments have two or three buckets and generally no more than five
 
 ---
 
-## Data management
+### Data management
 
 - Couchbase Server provides multiple ways of accessing data via _Services_
   Key services:
@@ -36,7 +40,7 @@ color: black
 
 ---
 
-## Cluster management
+### Cluster management
 
 - A cluster is one or more nodes which are each running a Couchbase Server
 - Additional nodes can be initialised and join a cluster
@@ -45,26 +49,40 @@ color: black
 
 ---
 
-## Failover and rebalance
+### Failover
 
-_Failover_
+_Failover_ is when a node is removed from a cluster with speed.
 
-- _Failover_ is when a node is removed from a cluster with speed.
 - When a data service node is removed manually it is known as a _graceful failover_
 - _Graceful failover_ of a data-service node that needs to be operated on triggers replica vBuckets on the remaining nodes to become active, and ensures continued data availability to the application
+- The replica buckets are configured in intra-cluster replication which happens at bucket-creation
 - When a node fails it is known as a _hard failover_
 - _Automatic failover_ is hard failover initiated by the server
 
-_Rebalance_
+---
+
+### Rebalance
 
 - _Rebalance_ is when data is redistributed between the available nodes in the cluster
-- _Rebalance_ should occur when nodes are added or removed
+- It should occur when nodes are added to or removed from a cluster
 
 ---
 
-# Use cases of the database
+### Cross Data Center Replication (XDCR)
 
+- Cross Data Center Replication (XDCR) replicates data from a bucket on the source cluster, and the data is received by a bucket on the target cluster
+
+- The source and target cluster can be different, unlike in intra-cluster replication
+
+---
+
+\
+\
+\
+\
 ![bg opacity:70%](background.jpeg)
+
+# Use cases of the database
 
 ---
 
@@ -139,32 +157,45 @@ Broadcasting/media considerations:
 
 ## Use case: Sky
 
-_Sky_ is the largest TV broadcaster and media company in Europe, and has over 22 million users
+Sky is the largest TV broadcaster and media company in Europe, and has over 22 million users
 
-_"There are many key factors that made us choose Couchbase: scalability, high availability, XDCR, flexible schema, and advanced monitoring, to name a few."
-Krishnan Venkatasubramanian
+Couchbase offered Sky increased scalability and performance in comparison with Oracle RDBMS, which is particularly important during viewing peaks
+
+---
+
+### Identity platform
+
+- _Sky_ moved its identity platform - which enables user sign-up and sign in - from Oracle RDBMS to Couchbase
+- XDCR replicates data across multiple data centers in different geographical locations
+- There is always a backup of data if there are issues with one data centers, ensuring data availabilty and resilience
+- XDCR tends to operate at the speed of network and/or memory with very latency
+
+- Moving the platform provided Sky with a 50% reduction in sign-in response time due to XDCR
+
+---
+
+### Disaster recovery
+
+- Disaster recovery is setup with unidirectional XDCR from the primary cluster to a disaster recovery cluster
+- In disaster recovery, the Disaster Recovery cluster is promoted to be the Primary cluster, and the old Primary cluster is demoted the new Disaster Recovery cluster
+- Moving to Couchbase reduced recovery time from hours to minutes
+
+---
+
+\
+\
+\
+_"There are many key factors that made us choose Couchbase: scalability, high availability, XDCR, flexible schema, and advanced monitoring, to name a few."_
+
+_Krishnan Venkatasubramanian
 Head of IT Architecture, Sky_
 
 ---
 
-## Identity platform
-
-- _Sky_ moved its identity platform - user sign-up and sign in - from Oracle RDBMS to Couchbase
-- 50% reduction in sign-in response time
-- XDCR
-
----
-
-## Traffic load
-
-Couchbase performs better at a large scale which is important during viewing peaks
-
----
-
-## Content updates
-
----
-
+\
+\
+\
+\
 ![bg opacity:70%](background.jpeg)
 
 # Demo

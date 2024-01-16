@@ -1,6 +1,7 @@
 ---
 marp: true
 color: black
+theme: gaia
 ---
 
 ![bg opacity:70%](background.jpeg)
