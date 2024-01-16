@@ -6,7 +6,18 @@ marp: true
 
 ---
 
-# Background
+# High Level Overview
+
+Couchbase is a distributed NoSQL database.
+
+---
+
+# Couchbase is a Document Store
+
+![](img/documentstore.png)
+
+- NoSQL
+- Schemaless
 
 ---
 
@@ -14,7 +25,7 @@ marp: true
 
 ---
 
-# Available or Consistent?
+# What about CAP?
 
 ---
 
@@ -23,3 +34,9 @@ marp: true
 ---
 
 # Pros and cons
+
+---
+
+# Links
+
+https://couchbase.live/ (online sandbox)
