@@ -1,9 +1,12 @@
 ---
 marp: true
 theme: gaia
+color: black
 ---
 
-# Overview of the design and architecture of the system
+![bg opacity:70%](background.jpeg)
+
+# Design and architecture of the system
 
 ---
 
@@ -13,6 +16,8 @@ theme: gaia
 - Each item has a key and a value, and is identified by a unique Document ID
 - Keys and values are stored as JSON documents
 - CREATE, RETRIEVE, UPDATE AND DELETE (CRUD) operations can be performed on document
+
+---
 
 ## Storage
 
@@ -59,22 +64,23 @@ _Rebalance_
 
 # Use cases of the database
 
+![bg opacity:70%](background.jpeg)
+
 ---
 
-## Popular companies that use Couchbase:
+#### Popular companies that use Couchbase
 
-### Media and communications
+Media and communications:
 
 - BT
 - Sky
 - Verizon
 - Vodafone
 
-### E-commerce
+E-commerce:
 
 - Tesco
 - Staples
-- Doddle
 
 ---
 
@@ -92,11 +98,11 @@ In gaming, databases are used to store data such as character data, saved games,
 
 ---
 
-## Jam City
+## Use case: Jam City
 
 _Jam City_ is a Facebook game which began to use Couchbase due to anticipated increased scalability requirement
 
-![](jam-city.jpeg)
+![bg right width:650px height:400px](jam-city.jpeg)
 
 ---
 
@@ -120,14 +126,6 @@ The failover and rebalance means that live traffic is not functionally affected 
 
 ---
 
-## Commerce
-
----
-
-## Doddle
-
----
-
 ## Media
 
 Broadcasting/media considerations:
@@ -139,20 +137,9 @@ Broadcasting/media considerations:
 
 ---
 
-## Sky
+## Use case: Sky
 
 _Sky_ is the largest TV broadcaster and media company in Europe, and has over 22 million users
-
-_Sky_ moved its identity platform - user sign-up and sign in - from Oracle RDBMS to Couchbase:
-
-- 50% reduction in sign-in response time
-- XDCR
-
-Couchbase performs better at a large scale which is important during viewing peaks
-
--Traffic load
-
-Content updates
 
 _"There are many key factors that made us choose Couchbase: scalability, high availability, XDCR, flexible schema, and advanced monitoring, to name a few."
 Krishnan Venkatasubramanian
@@ -160,4 +147,24 @@ Head of IT Architecture, Sky_
 
 ---
 
-# Consider a demo if that's possible
+## Identity platform
+
+- _Sky_ moved its identity platform - user sign-up and sign in - from Oracle RDBMS to Couchbase
+- 50% reduction in sign-in response time
+- XDCR
+
+---
+
+## Traffic load
+
+Couchbase performs better at a large scale which is important during viewing peaks
+
+---
+
+## Content updates
+
+---
+
+![bg opacity:70%](background.jpeg)
+
+# Demo
