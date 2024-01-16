@@ -1,14 +1,6 @@
 ---
 marp: true
 theme: gaia
-<style>
-  :root {
-    --color-background: #fff;
-    --color-foreground: #333;
-    --color-highlight: #f96;
-    --color-dimmed: #888;
-  }
-</style>
 ---
 
 # Overview of the design and architecture of the system
