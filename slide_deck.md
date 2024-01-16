@@ -10,19 +10,20 @@ theme: gaia
 
 ---
 
-example content
+# High Level Overview
+
+Couchbase is a distributed NoSQL database.
 
 ---
 
-![bg opacity:70%](background.jpeg)
+# Couchbase is a Document Store
 
-# Background
+![](img/documentstore.png)
+
+- NoSQL
+- Schemaless
 
 ---
-
----
-
-![bg opacity:70%](background.jpeg)
 
 # Data Model
 
@@ -30,9 +31,7 @@ example content
 
 ---
 
-![bg opacity:70%](background.jpeg)
-
-# Available or Consistent?
+# What about CAP?
 
 ---
 
@@ -49,3 +48,9 @@ example content
 ![bg opacity:70%](background.jpeg)
 
 # Pros and cons
+
+---
+
+# Links
+
+https://couchbase.live/ (online sandbox)
