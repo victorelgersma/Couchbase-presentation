@@ -1,6 +1,14 @@
 ---
 marp: true
+color: black
+theme: gaia
 ---
+
+\
+\
+\
+\
+![bg opacity:70%](img/background.jpeg)
 
 # Introduction to Couchbase
 
@@ -28,6 +36,12 @@ Couchbase is a distributed NoSQL database.
 # What about CAP?
 
 ---
+
+\
+\
+\
+\
+![bg opacity:70%](img/background.jpeg)
 
 # Use cases
 
