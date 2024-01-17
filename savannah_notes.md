@@ -46,7 +46,7 @@ color: black
 
 - A cluster is one or more nodes which are each running a Couchbase Server
 - Additional nodes can be initialised and join a cluster
-- REST API underpins the UI?
+- Users can manage clusters via REST API or Couchbase UI
 - The cluster manager is written in Erlang, a virtual machine based language
 ![bg right height:90% 105%](img/couchbase-node.png)
 <!-- May draw one -->
@@ -178,9 +178,7 @@ Couchbase offered Sky increased scalability and performance in comparison with O
 
 ---
 
-\
-\
-\
+![bg right width:105% height:70%](img/nosql-survey.png)
 _"There are many key factors that made us choose Couchbase: scalability, high availability, XDCR, flexible schema, and advanced monitoring, to name a few."_
 
 _Krishnan Venkatasubramanian
