@@ -46,29 +46,37 @@ color: black
 ### Storage
 
 - Items are stored in buckets
-- Most deployments have two or three buckets and generally no more than five
-- Replica buckets
-  ![bg right height:80% 105%](img/storage.png)
+- 1 bucket is implemented by 1024 vBuckets
+- Most deployments have two or three buckets
+- Replica buckets instantiated at bucket creation
+- item < vBucket < node < cluster
+  ![bg right height:80% 110%](img/storage.png)
 
 ---
 
 ### Data management
 
-- Access data via _Services_
-  Key services:
+Access data via _Services_:
+
 - _Data service_
 - _Index service_
 - _Query service_
+  https://couchbase.live/examples/basic-sql++-querying-primary-keys
+  ![bg right height:90% 100%](img/data-manager.png)
 
 ---
 
 ### Cluster management
 
-- Clusters and nodes
 - Additional nodes can be initialised and join a cluster
 - Cluster management via REST API or Couchbase UI
 - The cluster manager is written in Erlang
-  ![bg right height:90% 105%](img/couchbase-node.png)
+  ![bg right height:90%](img/cluster-manager.png)
+  https://couchbase.live/examples/basic-sql++-documents-not-rows
+
+---
+
+![bg height:100%](img/couchbase-node.png)
 
 ---
 
@@ -132,6 +140,7 @@ Gaming considerations:
 - Responsiveness
 - Availability 24/7
 - Frequent updates
+  https://couchbase.live/examples/basic-sql++-generating-scoreboards
 
 ---
 
@@ -156,7 +165,7 @@ Live traffic is not functionally affected when nodes are manually updated or mai
 
 ### Iterative game design
 
-- JSON data model facilites game design
+- JSON data model facilitates iterative game design
 - No need to request and wait for schema changes
 - Database schema flexibility and increased application speed
 
@@ -178,12 +187,13 @@ Broadcasting/media considerations:
 Sky is the largest TV broadcaster and media company in Europe, and has over 22 million users
 
 Couchbase offered Sky increased scalability and performance in comparison with Oracle RDBMS
+![bg right width:90%](img/sky-logo.jpeg)
 
 ---
 
 ### Identity platform
 
-- _Sky_ moved its identity platform - which enables user sign-up and sign in - from Oracle RDBMS to Couchbase
+- _Sky_ moved its identity platform from Oracle RDBMS to Couchbase
 - XDCR ensures there is always a backup of data if there are issues with one data centers
 - XDCR tends to operate at the speed of network and/or memory with low latency
 - 50% reduction in sign-in response time due to XDCR
@@ -224,17 +234,20 @@ Head of IT Architecture, Sky_
 
 # Demo
 
+https://couchbase.live/examples/basic-sql++-basics
+
 ---
 
 ### Reading
 
-https://couchbase.live/ (online sandbox)
+Couchbase playground
+https://couchbase.live/
 
-glossary
+Glossary
 https://docs.couchbase.com/server/current/learn/glossary.html
 
-intra-cluster-replication
+Intra-cluster-replication
 https://docs.couchbase.com/server/current/learn/clusters-and-availability/intra-cluster-replication.html
 
-intro / marketing video:
+Intro / marketing video:
 https://www.youtube.com/watch?v=7OKSgtDt1lo
