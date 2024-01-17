@@ -72,7 +72,7 @@ _Failover_ is when a node is removed from a cluster with speed.
 
 ---
 
-### Cross Data Center Replication (XDCR)
+### Cross Data Center Replication
 
 - Cross Data Center Replication (XDCR) replicates data from a bucket on the source cluster, and the data is received by a bucket on the target cluster
 
@@ -91,19 +91,12 @@ _Failover_ is when a node is removed from a cluster with speed.
 
 ---
 
-#### Popular companies that use Couchbase
+## Popular companies that use Couchbase
 
-Media and communications:
-
-- BT
-- Sky
-- Verizon
-- Vodafone
-
-E-commerce:
-
-- Tesco
-- Staples
+![bg width:100% height:15%](img/vodafone-logo.png)
+![bg width:90%](img/sky-logo.jpeg)
+![bg width:90% height:15%](img/tesco-logo.png)
+![bg width:90%](img/bt-logo.jpeg)
 
 ---
 
