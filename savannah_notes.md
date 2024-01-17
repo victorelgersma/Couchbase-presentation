@@ -27,6 +27,8 @@ color: black
 
 - Items are stored in buckets, which are named data containers
 - Most deployments have two or three buckets and generally no more than five
+- At bucket creation, replica buckets are configured via intra-cluster replication
+  ![bg right height:80% 105%](img/storage.png)
 
 ---
 
@@ -44,8 +46,10 @@ color: black
 
 - A cluster is one or more nodes which are each running a Couchbase Server
 - Additional nodes can be initialised and join a cluster
-- Couchbase data is
+- REST API underpins the UI?
 - The cluster manager is written in Erlang, a virtual machine based language
+![bg right height:90% 105%](img/couchbase-node.png)
+<!-- May draw one -->
 
 ---
 
@@ -56,7 +60,7 @@ _Failover_ is when a node is removed from a cluster with speed.
 - When a data service node is removed manually it is known as a _graceful failover_.
 - It occurs on a data-service node that needs to be operated on and triggers replica vBuckets on the remaining nodes to become active.
 - This ensures continued data availability to the application
-- The replica buckets are configured in intra-cluster replication which happens at bucket-creation
+
 - When a node fails it is known as a _hard failover_. _Automatic failover_ is hard failover initiated by the server
 
 ---
@@ -73,7 +77,7 @@ _Failover_ is when a node is removed from a cluster with speed.
 - Cross Data Center Replication (XDCR) replicates data from a bucket on the source cluster, and the data is received by a bucket on the target cluster
 
 - The source and target cluster can be different, unlike in intra-cluster replication
-- XDCR replicates data across multiple data centers in different geographical locations
+- XDCR replicates data across multiple data centers in different geographical locations so data is close to users
 
 ---
 
