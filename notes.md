@@ -2,6 +2,7 @@
 
 - distributed
   - subject to the CAP theorem
+  - how to distribute data between nodes?
 
 Q) What is NoSQL?
 

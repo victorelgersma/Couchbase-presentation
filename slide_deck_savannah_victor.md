@@ -8,6 +8,26 @@ color: black
 \
 \
 \
+
+![bg opacity:70%](img/background.jpeg)
+
+# Overview
+
+---
+
+![bg right height:50% 55%](img/couchbase-1-logo-png-transparent.png)
+
+### Overview
+
+- source-available
+- distributed
+- shared-nothing architecture
+- multi-model
+- NoSQL
+- SQL++ for querying
+
+---
+
 ![bg opacity:70%](img/background.jpeg)
 
 # Design and architecture of the system
@@ -78,6 +98,20 @@ _Failover_ is when a node is removed from a cluster with speed.
 
 - The source and target cluster can be different, unlike in intra-cluster replication
 - XDCR replicates data across multiple data centers in different geographical locations so data is close to users
+
+---
+
+\
+\
+\
+\
+![bg opacity:70%](img/background.jpeg)
+
+# How does this apply to CAP?
+
+---
+
+![bg width:auto height:100%](img/cap.png)
 
 ---
 
@@ -192,4 +226,29 @@ Head of IT Architecture, Sky_
 \
 ![bg opacity:70%](img/background.jpeg)
 
+# Pros / Cons
+
+---
+
+\
+\
+\
+\
+![bg opacity:70%](img/background.jpeg)
+
 # Demo
+
+---
+
+### Reading
+
+https://couchbase.live/ (online sandbox)
+
+glossary
+https://docs.couchbase.com/server/current/learn/glossary.html
+
+intra-cluster-replication
+https://docs.couchbase.com/server/current/learn/clusters-and-availability/intra-cluster-replication.html
+
+intro / marketing video:
+https://www.youtube.com/watch?v=7OKSgtDt1lo
