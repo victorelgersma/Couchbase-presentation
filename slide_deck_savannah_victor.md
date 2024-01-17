@@ -244,6 +244,8 @@ Head of IT Architecture, Sky_
 
 ### Reading
 
+https://couchbase.live/ (online sandbox)
+
 glossary
 https://docs.couchbase.com/server/current/learn/glossary.html
 
