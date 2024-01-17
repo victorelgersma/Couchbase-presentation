@@ -8,7 +8,6 @@ color: black
 \
 \
 \
-
 ![bg opacity:70%](img/background.jpeg)
 
 # Overview
@@ -19,11 +18,11 @@ color: black
 
 ### Overview
 
-- source-available
-- distributed
-- shared-nothing architecture
-- multi-model
+- Source-available
+- Distributed
+- Shared-nothing architecture
 - NoSQL
+- Multi-model
 - SQL++ for querying
 
 ---
@@ -36,68 +35,59 @@ color: black
 
 ### Data
 
-- Data is stored as items in document
-- Each item has a key and a value, and is identified by a unique Document ID
-- Keys and values are stored as JSON documents
-- CREATE, RETRIEVE, UPDATE AND DELETE (CRUD) operations can be performed on document
+![bg right height:90%](img/documentstore.png)
+
+- Couchbase is both a key-value and a document database
+- Storage in binary format or JSON documents
+- CRUD operations can be performed on document
 
 ---
 
 ### Storage
 
-- Items are stored in buckets, which are named data containers
+- Items are stored in buckets
 - Most deployments have two or three buckets and generally no more than five
-- At bucket creation, replica buckets are configured via intra-cluster replication
+- Replica buckets
   ![bg right height:80% 105%](img/storage.png)
 
 ---
 
 ### Data management
 
-- Couchbase Server provides multiple ways of accessing data via _Services_
+- Access data via _Services_
   Key services:
-- _Data service_ is used to store and retrieve data-items by key
-- _Index service_ is used to create indices
-- _Query service_ is used to retrieve data-items via queries, and uses the Data and Index services
+- _Data service_
+- _Index service_
+- _Query service_
 
 ---
 
 ### Cluster management
 
-- A cluster is one or more nodes which are each running a Couchbase Server
+- Clusters and nodes
 - Additional nodes can be initialised and join a cluster
-- Users can manage clusters via REST API or Couchbase UI
-- The cluster manager is written in Erlang, a virtual machine based language
-![bg right height:90% 105%](img/couchbase-node.png)
-<!-- May draw one -->
+- Cluster management via REST API or Couchbase UI
+- The cluster manager is written in Erlang
+  ![bg right height:90% 105%](img/couchbase-node.png)
 
 ---
 
 ### Failover
 
-_Failover_ is when a node is removed from a cluster with speed.
+- _Graceful failover_
+  Replica vBuckets ensure continued data availability to the application
 
-- When a data service node is removed manually it is known as a _graceful failover_.
-- It occurs on a data-service node that needs to be operated on and triggers replica vBuckets on the remaining nodes to become active.
-- This ensures continued data availability to the application
-
-- When a node fails it is known as a _hard failover_. _Automatic failover_ is hard failover initiated by the server
-
----
-
-### Rebalance
-
-- _Rebalance_ is when data is redistributed between the available nodes in the cluster
-- It should occur when nodes are added to or removed from a cluster
+- _Hard failover_
+- _Automatic failover_
+- _Rebalance_ should occur when nodes are added to or removed from a cluster
 
 ---
 
 ### Cross Data Center Replication
 
 - Cross Data Center Replication (XDCR) replicates data from a bucket on the source cluster, and the data is received by a bucket on the target cluster
-
-- The source and target cluster can be different, unlike in intra-cluster replication
-- XDCR replicates data across multiple data centers in different geographical locations so data is close to users
+- The source and target cluster can be different
+- Replicates data across multiple data centers in different geographical locations
 
 ---
 
@@ -142,9 +132,6 @@ Gaming considerations:
 - Responsiveness
 - Availability 24/7
 - Frequent updates
-- Semi and unstructured data?
-
-In gaming, databases are used to store data such as character data, saved games, scores and much more
 
 ---
 
@@ -158,7 +145,7 @@ _Jam City_ is a Facebook game which began to use Couchbase due to anticipated in
 
 ## Failover and rebalance
 
-The failover and rebalance means that live traffic is not functionally affected when nodes are manually updated or maintained:
+Live traffic is not functionally affected when nodes are manually updated or maintained:
 
 - Graceful failover of the target node performed (replica vBuckets activated)
 - Maintenance operations performed on the target node
@@ -169,10 +156,9 @@ The failover and rebalance means that live traffic is not functionally affected 
 
 ### Iterative game design
 
-- Game design is based on continuous iteration
-- The JSON data model allows the game to iterate without having to request and wait for schema changes (altering of database structure)
-- The JSON data model of Couchbase benefits Jam City by providing database schema flexibility and increased application speed
-<!-- - Iterative game design includes planning, design, coding, testing, release and evaluation -->
+- JSON data model facilites game design
+- No need to request and wait for schema changes
+- Database schema flexibility and increased application speed
 
 ---
 
@@ -181,9 +167,9 @@ The failover and rebalance means that live traffic is not functionally affected 
 Broadcasting/media considerations:
 
 - Sign-up and sign-in platform
-- Fluctuating user numbers - i.e. tea-time peak and peak during the Coronation
+- Fluctuating user numbers
 - Frequent content updates
-- Potentially millions of users (depending on the company)
+- Potentially millions of users
 
 ---
 
@@ -191,32 +177,24 @@ Broadcasting/media considerations:
 
 Sky is the largest TV broadcaster and media company in Europe, and has over 22 million users
 
-Couchbase offered Sky increased scalability and performance in comparison with Oracle RDBMS, which is particularly important during viewing peaks
+Couchbase offered Sky increased scalability and performance in comparison with Oracle RDBMS
 
 ---
 
 ### Identity platform
 
 - _Sky_ moved its identity platform - which enables user sign-up and sign in - from Oracle RDBMS to Couchbase
-- XDCR ensures there is always a backup of data if there are issues with one data centers, ensuring data availabilty and resilience
+- XDCR ensures there is always a backup of data if there are issues with one data centers
 - XDCR tends to operate at the speed of network and/or memory with low latency
-- Moving the platform provided Sky with a 50% reduction in sign-in response time due to XDCR
+- 50% reduction in sign-in response time due to XDCR
 
 ---
 
 ### Disaster recovery
 
-- Disaster recovery is setup with unidirectional XDCR from the primary cluster to a disaster recovery cluster
-- In disaster recovery, the Disaster Recovery cluster is promoted to be the Primary cluster, and the old Primary cluster is demoted the new Disaster Recovery cluster
-- Moving to Couchbase reduced recovery time from hours to minutes
-
----
-
-![bg right width:105% height:70%](img/nosql-survey.png)
-_"There are many key factors that made us choose Couchbase: scalability, high availability, XDCR, flexible schema, and advanced monitoring, to name a few."_
-
-_Krishnan Venkatasubramanian
-Head of IT Architecture, Sky_
+- Setup - Unidirectional XDCR from the primary cluster to a disaster recovery cluster
+- The Disaster Recovery cluster is promoted to be the Primary cluster, and the old Primary cluster is demoted the new Disaster Recovery cluster
+- Reduced recovery time from hours to minutes
 
 ---
 
@@ -227,6 +205,14 @@ Head of IT Architecture, Sky_
 ![bg opacity:70%](img/background.jpeg)
 
 # Pros / Cons
+
+---
+
+![bg right width:105% height:70%](img/nosql-survey.png)
+_"There are many key factors that made us choose Couchbase: scalability, high availability, XDCR, flexible schema, and advanced monitoring, to name a few."_
+
+_Krishnan Venkatasubramanian
+Head of IT Architecture, Sky_
 
 ---
 
