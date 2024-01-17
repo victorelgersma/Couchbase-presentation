@@ -41,6 +41,8 @@ color: black
 - Storage in binary format or JSON documents
 - CRUD operations can be performed on document
 
+https://couchbase.live/examples/basic-sql++-documents-not-rows
+
 ---
 
 ### Storage
@@ -72,7 +74,6 @@ Access data via _Services_:
 - Cluster management via REST API or Couchbase UI
 - The cluster manager is written in Erlang
   ![bg right height:90%](img/cluster-manager.png)
-  https://couchbase.live/examples/basic-sql++-documents-not-rows
 
 ---
 
