@@ -39,7 +39,7 @@ color: black
 
 ### Data
 
-![bg right height:40% width:400px ](img/json-example.png)
+![bg right height:90% width:340px ](img/document.png)
 ![bg width:50% height:40%](img/documentstore.png)
 
 - Couchbase is both a key-value and a document database
