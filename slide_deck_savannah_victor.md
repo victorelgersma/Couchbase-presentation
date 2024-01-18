@@ -27,10 +27,6 @@ color: black
 
 ---
 
-## ![bg height:90%](img/drawing_cluster_node.svg)
-
----
-
 \
 \
 \
