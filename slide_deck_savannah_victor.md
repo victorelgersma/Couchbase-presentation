@@ -248,7 +248,7 @@ https://couchbase.live/examples/basic-sql++-basics
 
 ---
 
-### Reading
+### Further Reading
 
 Couchbase playground
 https://couchbase.live/
@@ -258,6 +258,3 @@ https://docs.couchbase.com/server/current/learn/glossary.html
 
 Intra-cluster-replication
 https://docs.couchbase.com/server/current/learn/clusters-and-availability/intra-cluster-replication.html
-
-Intro / marketing video:
-https://www.youtube.com/watch?v=7OKSgtDt1lo
