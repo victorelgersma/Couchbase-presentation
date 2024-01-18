@@ -35,10 +35,11 @@ color: black
 
 ### Data
 
-![bg right height:90%](img/documentstore.png)
+![bg right height:40% width:400px ](img/json-example.png)
+![bg width:50% height:40%](img/documentstore.png)
 
 - Couchbase is both a key-value and a document database
-- Storage in binary format or JSON documents
+- Storage in JSON documents
 - CRUD operations can be performed on document
 
 https://couchbase.live/examples/basic-sql++-documents-not-rows
@@ -51,7 +52,7 @@ https://couchbase.live/examples/basic-sql++-documents-not-rows
 - 1 bucket is implemented by 1024 vBuckets
 - Most deployments have two or three buckets
 - Replica buckets instantiated at bucket creation
-- item < vBucket < node < cluster
+- Item < vBucket < node < cluster
   ![bg right height:80% 110%](img/storage.png)
 
 ---
@@ -63,7 +64,7 @@ Access data via _Services_:
 - _Data service_
 - _Index service_
 - _Query service_
-  https://couchbase.live/examples/basic-sql++-querying-primary-keys
+  https://couchbase.live/examples/basic-sql++-combine-multiple-statements
   ![bg right height:90% 100%](img/data-manager.png)
 
 ---
@@ -137,7 +138,7 @@ Access data via _Services_:
 
 Gaming considerations:
 
-- Large numbers of concurrent users (often global)
+- Large numbers of concurrent users
 - Responsiveness
 - Availability 24/7
 - Frequent updates
