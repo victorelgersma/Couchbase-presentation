@@ -10,20 +10,24 @@ color: black
 \
 ![bg opacity:70%](img/background.jpeg)
 
-# Overview
+# Couchbase
 
 ---
 
-![bg right height:50% 55%](img/couchbase-1-logo-png-transparent.png)
-
 ### Overview
+
+![bg right height:50% 55%](img/couchbase-1-logo-png-transparent.png)
 
 - Source-available
 - Distributed
-- Shared-nothing architecture
 - NoSQL
 - Multi-model
-- SQL++ for querying
+- Optimized for scalability and low latency
+- Shared-nothing architecture
+
+---
+
+## ![bg height:90%](img/drawing_cluster_node.svg)
 
 ---
 
