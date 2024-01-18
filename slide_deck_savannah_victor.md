@@ -27,6 +27,10 @@ color: black
 
 ---
 
+\
+\
+\
+\
 ![bg opacity:70%](img/background.jpeg)
 
 # Design and architecture of the system
